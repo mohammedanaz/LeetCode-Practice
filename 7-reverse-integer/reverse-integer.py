@@ -1,10 +1,11 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        sign_flag = 0 if x >= 0 else 1
-        x_string = str(abs(x))
-        print(sign_flag)
-        print(x_string)
-        x = x_string[::-1] if sign_flag == 0 else '-' + x_string[::-1]
-        x = int(x)
-        return x if -2**31 <= x <= 2**31 - 1 else 0
+        sign_flag = 0 
+        if x < 0:
+            sign_flag = 1
+            x = x * -1
+        x = int(str(x)[::-1])
+        if x > 2**31:
+            return 0
+        return -1*x if sign_flag else x
         
