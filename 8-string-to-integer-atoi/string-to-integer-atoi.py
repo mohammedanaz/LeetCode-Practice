@@ -1,6 +1,5 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
-        print(f's is - ^{s}^')
         i = 0
         n = len(s)
         sign = 1
