@@ -14,4 +14,3 @@ class Solution:
             else:
                 right -= 1
         return area
-                    
