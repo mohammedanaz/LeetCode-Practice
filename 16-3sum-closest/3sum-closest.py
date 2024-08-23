@@ -14,10 +14,10 @@ class Solution:
                     close_sum = current_sum
                 if current_sum < target:
                     left += 1
-                    while left < right and nums[left] == nums[left - 1]:
-                        left += 1
+                    # while left < right and nums[left] == nums[left - 1]:
+                    #     left += 1
                 else:
                     right -= 1
-                    while left < right and nums[right] == nums[right + 1]:
-                        right -= 1
+                    # while left < right and nums[right] == nums[right + 1]:
+                    #     right -= 1
         return close_sum 
