@@ -3,7 +3,6 @@ class Solution:
         count1 = Counter(nums1)
         count2 = Counter(nums2)
     
-    # Find the intersection by taking the minimum count of each element
         result = []
         for num in count1:
             if num in count2:
