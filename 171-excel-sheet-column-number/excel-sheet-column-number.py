@@ -9,14 +9,8 @@ class Solution:
             'Z': 26
         }
         result = 0
-        base = 1
         ln = len(columnTitle)
-        rev = columnTitle[::-1]
-        for i, item in enumerate(rev):
-            if base == 1:
-                result += letter_map[item]
-                base *= 26
-            else:
-                result += letter_map[item] * base
-                base *= 26
-        return result
+        for i, item in enumerate(columnTitle):
+            current_value = 26**(ln-i-1) * letter_map[item]
+            result += current_value
+        return result 
